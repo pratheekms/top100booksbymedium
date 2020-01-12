@@ -16,13 +16,13 @@ def writeToExcelFunction(bookNestedDict):
     for bn, ba in bookNestedDict.items():
         print("book num", bn)
 
-        col1 = bn  #booknum
+        col1 = bn  # booknum
         for key in ba:
             print(key + ":", ba[key])
 
-            col2 = ba['name']  #bookname
-            col3 = ba['author']  #bookauthor
-            #call srite to text file function
+            col2 = ba['name']  # bookname
+            col3 = ba['author']  # bookauthor
+            # call write to text file function
             '''
         f = open("top100BooksByMedium.txt", "a")
         f.write(str(col1) + '\t' + str(col2) + '\t' + col2 + '\n')

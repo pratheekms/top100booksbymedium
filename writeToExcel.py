@@ -1,7 +1,7 @@
 import openpyxl
 
 
-def googleSearchQueryFunction(rowNum, colNum, value):
+def writeToExcelFunction(rowNum, colNum, value):
     print("------saved excel file open------")
     wb_obj = openpyxl.load_workbook("top100BooksByMedium.xlsx")
     sheet_obj = wb_obj.active

@@ -15,6 +15,8 @@ def googleSearchQueryFunction(bookName, bookAuthor):
         # searchPhrase="Catch-22 by Joseph Heller in good reads"
         print("modified search phrase ", searchPhrase)
 
+        #call google search and pass the searchPhrase
+
 
 if __name__ == '__main__':
     print("unexpected calling")
