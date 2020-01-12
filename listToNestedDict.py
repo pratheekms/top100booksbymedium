@@ -20,7 +20,7 @@ def listToDictFunction(extractedValueDict, extractedValueCount=1):
         bookNestedDict.update({extractedValueCount: {'name': i.split(' by ')[0], 'author': i.split(' by ')[1]}})
         extractedValueCount += 1
     print("extracted value count" + str(extractedValueCount))
-
+    return bookNestedDict
 
 if __name__ == '__main__':
     print("unexpected calling")

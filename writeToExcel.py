@@ -8,6 +8,7 @@ def writeToExcelFunction(rowNum, colNum, value):
     m_row = sheet_obj.max_row
     print("rows=" + str(m_row))
     sheet_obj.cell(row=rowNum + 1, column=colNum).value = str(value)  # col num 4
+    wb_obj.save("top100BooksByMedium.xlsx")
 
 
 if __name__ == '__main__':

@@ -1,4 +1,5 @@
 import openpyxl
+import writeToTxtFile
 
 
 def writeToExcelFunction(bookNestedDict):
@@ -23,6 +24,7 @@ def writeToExcelFunction(bookNestedDict):
             col2 = ba['name']  # bookname
             col3 = ba['author']  # bookauthor
             # call write to text file function
+            writeToTxtFile.writeToTxtFileFunction(col1, col2, col3)
             '''
         f = open("top100BooksByMedium.txt", "a")
         f.write(str(col1) + '\t' + str(col2) + '\t' + col2 + '\n')
