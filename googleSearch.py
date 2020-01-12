@@ -1,8 +1,12 @@
-
 import getRatingFromGoodreads
 import random
-def googleSearchFunction(searchPhrase,i):
+import googleSearchQuery
+import getRatingFromGoodreads
+
+
+def googleSearchFunction(searchPhrase, i):
     print("------------rating process starts------------")
+    print("modified search phrase googleSearchFunction- ", searchPhrase)
 
     # book name and book author details are saved to an excel file
     import urllib3
@@ -14,11 +18,12 @@ def googleSearchFunction(searchPhrase,i):
         print("No module named 'google' found")
 
         # call the sear query function
-        for j in search(searchPhrase, tld="com", num=10, stop=1, pause=random.randint(1,3)):  # random.randint(1,3)):
-            goodReadsUrl = j
-        print("good reads URL is ", goodReadsUrl)
-        getRatingFromGoodreads(goodReadsUrl,i)
-
+    #googleSearchQuery.googleSearchQueryFunction
+    for j in search(searchPhrase, tld="com", num=10, stop=1, pause=random.randint(1, 3)):  # random.randint(1,3)):
+        goodReadsUrl = j
+        print("url generated")
+    print("good reads URL is ", goodReadsUrl)
+    getRatingFromGoodreads.getRatingFromGoodreadsFunction(goodReadsUrl, i)
 
 
 if __name__ == '__main__':
