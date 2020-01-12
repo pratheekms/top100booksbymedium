@@ -18,14 +18,19 @@ def getRatingFromGoodreadsFunction(goodReadsUrl, i):
     ratingObj = soup.find("span", itemprop="ratingValue")
     try:
         rating = ratingObj.getText()
+        print("rating in try "+rating)
         # print("ratinng of", bookname, bookauthor, rating)
         # call write ti excel
+        print("calling write to excel from try")
         writeToExcel.writeToExcelFunction(i, 4, rating)
+
 
     except:
         rating = "Error"
+        print("rating in exception " + rating)
         # print("ratinng of", bookname, bookauthor, rating)
         # call write to excel pass Error
+        print("calling write to excel from exception")
         writeToExcel.writeToExcelFunction(i, 4, rating)
 
 
