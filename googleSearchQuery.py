@@ -14,7 +14,7 @@ def googleSearchQueryFunction():
         searchPhrase = bookName + " by " + bookAuthor + " goodreads"
         # searchPhrase="Catch-22 by Joseph Heller in good reads"
         print("modified search phrase ", searchPhrase)
-        googleSearch.googleSearchFunction(searchPhrase)
+        googleSearch.googleSearchFunction(searchPhrase,i)
 
         #call google search and pass the searchPhrase
 

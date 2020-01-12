@@ -1,8 +1,9 @@
 import bs4, requests
 import lxml
+import  writeToExcel
 
 
-def getRatingFromGoodreadsFunction(goodReadsUrl, null=None):
+def getRatingFromGoodreadsFunction(goodReadsUrl,i, null=None):
     print("---scrapping for rating start---")
     # logger.info("---scrapping for rating start---")
     try:
@@ -10,18 +11,20 @@ def getRatingFromGoodreadsFunction(goodReadsUrl, null=None):
     except:
         res.raise_for_status()
         # break
-        return null
+        exit()
     soup = bs4.BeautifulSoup(res.text, 'lxml')
     ratingObj = soup.find("span", itemprop="ratingValue")
     try:
         rating = ratingObj.getText()
         # print("ratinng of", bookname, bookauthor, rating)
         # call write ti excel
+        writeToExcel.writeToExcelFunction(i,4,rating)
 
     except:
         rating = "Error"
         # print("ratinng of", bookname, bookauthor, rating)
         # call write to excel pass Error
+        writeToExcel.writeToExcelFunction(i,4, rating)
 
 
 if __name__ == '__main__':

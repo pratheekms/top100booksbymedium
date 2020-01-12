@@ -1,5 +1,6 @@
 
-def googleSearchFunction(searchPhrase):
+import getRatingFromGoodreads
+def googleSearchFunction(searchPhrase,i):
     print("------------rating process starts------------")
 
     # book name and book author details are saved to an excel file
@@ -15,6 +16,7 @@ def googleSearchFunction(searchPhrase):
         for j in search(searchPhrase, tld="com", num=10, stop=1, pause=0):  # random.randint(1,3)):
             goodReadsUrl = j
         print("good reads URL is ", goodReadsUrl)
+        getRatingFromGoodreads(goodReadsUrl,i)
 
 
 
