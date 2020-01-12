@@ -1,5 +1,6 @@
 
 import getRatingFromGoodreads
+import random
 def googleSearchFunction(searchPhrase,i):
     print("------------rating process starts------------")
 
@@ -13,7 +14,7 @@ def googleSearchFunction(searchPhrase,i):
         print("No module named 'google' found")
 
         # call the sear query function
-        for j in search(searchPhrase, tld="com", num=10, stop=1, pause=0):  # random.randint(1,3)):
+        for j in search(searchPhrase, tld="com", num=10, stop=1, pause=random.randint(1,3)):  # random.randint(1,3)):
             goodReadsUrl = j
         print("good reads URL is ", goodReadsUrl)
         getRatingFromGoodreads(goodReadsUrl,i)
