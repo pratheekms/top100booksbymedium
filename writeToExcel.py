@@ -22,14 +22,14 @@ def writeToExcelFunction(bookNestedDict):
 
             col2 = ba['name']  #bookname
             col3 = ba['author']  #bookauthor
-        f = open("top100BokksByMedium.txt", "a")
+        f = open("top100BooksByMedium.txt", "a")
         f.write(str(col1) + '\t' + str(bookname) + '\t' + bookauthor + '\n')
         f.close()
         sheet_objex.cell(row=col1 + 1, column=1).value = str(col1)
         sheet_objex.cell(row=col1 + 1, column=2).value = str(col2)
         sheet_objex.cell(row=col1 + 1, column=3).value = str(col3)
         # sheet_objex.cell(row=col1+1,column=4).value='Rating'
-    print("------writng list slno book author to excel end------")
+    print("------writing list slno book author to excel end------")
 
     wb_objex.save("top100BooksByMedium.xlsx")
 
