@@ -1,10 +1,11 @@
 import bs4, requests
+import lxml
 
-finalResultDict = {}
-
-
-def scrapingFunction(urlName, tagName, className):
+def scrapingFunction(url, tagName, className):
     print("scraping web for top 100 books start")
+    import urllib3
+
+    urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
     #url = "https://medium.com/world-literature/creating-the-ultimate-list-100-books-to-read-before-you-die-45f1b722b2e5"
     res = requests.get(url, verify=False)
