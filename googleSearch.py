@@ -1,5 +1,3 @@
-import google
-
 
 def googleSearchFunction(searchPhrase):
     print("------------rating process starts------------")

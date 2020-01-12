@@ -1,18 +1,14 @@
+import openpyxl
+def writeToTxtFileFunction(rowNum,colNum,value):
+    wb_obj = openpyxl.load_workbook("top100BooksByMedium.xlsx")
+    sheet_obj = wb_obj.active
+    m_row = sheet_obj.max_row
+    print("rows=" + str(m_row))
 
-def writeToTxtFileFunction(bookNestedDict):
-
-    for bn, ba in bookNestedDict.items():
-        print("book num", bn)
-
-        col1 = bn  # booknum
-        for key in ba:
-            print(key + ":", ba[key])
-
-            col2 = ba['name']  # bookname
-            col3 = ba['author']  # bookauthor
-            f = open("top100BooksByMedium.txt", "a")
-            f.write(str(col1) + '\t' + str(col2) + '\t' + col2 + '\n')
-            f.close()
+    sheet_obj.cell(row=rowNum + 1, column=colNum).value = str(value) #col=4
+    print("---rating write complete---")
+    print("-----------------------")
+    wb_obj.save("top100BooksByMedium.xlsx")
 
 
 if __name__ == '__main__':
