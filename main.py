@@ -1,20 +1,16 @@
 import time
-import scrapeAndFormatData
-import smsService
-import emailService
+import webScrapping
+
 
 def main():
     start = time.time()
-    #calling scraping function and formating extracted data
-    scrapeAndFormatData.scrapeAndFormatDataFunction()
-    #calling sms service
-    smsService.smsServiceFunction()
-
-    #calling email service
-    emailService.emailServiceFunction()
+    url="https://medium.com/world-literature/creating-the-ultimate-list-100-books-to-read-before-you-die-45f1b722b2e5"
+    webScrapping.scrapingFunction(url,"strong","id ke")
 
 
     end = time.time()
-    print("time taken by program is:"+str(end - start))
-if __name__=='__main__':
+    print("time taken by program is:" + str(end - start))
+
+
+if __name__ == '__main__':
     main()

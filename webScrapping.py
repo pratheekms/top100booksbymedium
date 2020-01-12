@@ -3,7 +3,7 @@ import bs4, requests
 finalResultDict = {}
 
 
-def scrapingFunction(name, urlName, tagName, className):
+def scrapingFunction(urlName, tagName, className):
     print("scraping web for top 100 books start")
 
     #url = "https://medium.com/world-literature/creating-the-ultimate-list-100-books-to-read-before-you-die-45f1b722b2e5"
