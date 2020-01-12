@@ -1,7 +1,7 @@
 import openpyxl
+import googleSearch
 
-
-def googleSearchQueryFunction(bookName, bookAuthor):
+def googleSearchQueryFunction():
     print("------saved excel file open------")
     wb_obj = openpyxl.load_workbook("top100BooksByMedium.xlsx")
     sheet_obj = wb_obj.active
@@ -14,6 +14,7 @@ def googleSearchQueryFunction(bookName, bookAuthor):
         searchPhrase = bookName + " by " + bookAuthor + " goodreads"
         # searchPhrase="Catch-22 by Joseph Heller in good reads"
         print("modified search phrase ", searchPhrase)
+        googleSearch.googleSearchFunction(searchPhrase)
 
         #call google search and pass the searchPhrase
 

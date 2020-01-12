@@ -2,6 +2,7 @@ import time
 import webScrapping
 import listToNestedDict
 import writeToExcelFromDict
+import googleSearchQuery
 
 
 def main():
@@ -12,6 +13,7 @@ def main():
     # dictToNestedDict.HtmlToDictFunction(webScrapping.scrapingFunction.extractedValueDict)
     bookNestedDict = listToNestedDict.listToDictFunction(extractedValueDict)
     writeToExcelFromDict.writeToExcelFunction(bookNestedDict)
+    googleSearchQuery.googleSearchQueryFunction()
     end = time.time()
     print("time taken by program is:" + str(end - start))
 
