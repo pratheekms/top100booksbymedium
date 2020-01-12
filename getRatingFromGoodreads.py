@@ -5,7 +5,7 @@ import writeToExcel
 
 def getRatingFromGoodreadsFunction(goodReadsUrl, i):
     print("---scrapping for rating start---")
-    print("url from get rating"+goodReadsUrl)
+    #print("url from get rating"+goodReadsUrl)
     # logger.info("---scrapping for rating start---")
     try:
         res = requests.get(goodReadsUrl, verify=False)

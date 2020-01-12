@@ -19,7 +19,7 @@ def googleSearchFunction(searchPhrase, i):
 
         # call the sear query function
     #googleSearchQuery.googleSearchQueryFunction
-    for j in search(searchPhrase, tld="com", num=10, stop=1, pause=random.randint(1, 3)):  # random.randint(1,3)):
+    for j in search(searchPhrase, tld="com", num=10, stop=1, pause=0):  # random.randint(1,3)):
         goodReadsUrl = j
         print("url generated")
     print("good reads URL is ", goodReadsUrl)
