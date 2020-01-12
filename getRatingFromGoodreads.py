@@ -1,5 +1,6 @@
 
 import bs4, requests
+import lxml
 def getRatingFromGoodreadsFunction(goodReadsUrl, null=None):
     print("---scrapping for rating start---")
     # logger.info("---scrapping for rating start---")
