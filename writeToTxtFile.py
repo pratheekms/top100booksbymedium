@@ -1,5 +1,4 @@
 
-
 def writeToTxtFileFunction(bookNestedDict):
 
     for bn, ba in bookNestedDict.items():
